@@ -1,5 +1,4 @@
 import pygame
-import ctypes
 import random
 import abc
 import os
@@ -11,12 +10,10 @@ pygame.init()
 pygame.mixer.init()
 FPS = 60
 
-user32 = ctypes.windll.user32
-screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
+WIDTH, HEIGHT = screensize = (1600, 700)
 screen = pygame.display.set_mode(screensize)
 
 scene = pygame.image.load("textures/static/background.png")
-WIDTH, HEIGHT = 1600, 700
 (SCENE_W, SCENE_H), (SCENE_X, SCENE_Y) = scene.get_size(), (0, 0)
 
 pygame.display.set_caption("БУМЕР WEST")
